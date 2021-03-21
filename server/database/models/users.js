@@ -15,7 +15,7 @@ const userSchema = new Schema({
     required: [true, "Please enter your email."],
     unique: true,
     match: [
-      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+      /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
       "Please add a valid email",
     ],
   },
@@ -48,6 +48,7 @@ const userSchema = new Schema({
 });
 
 // Hash password before saveing the new user
+// eslint-disable-next-line func-names
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {
     next();
