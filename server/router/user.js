@@ -11,7 +11,7 @@ const {
 const { updateUserValidation } = require('../middleware/validation');
 
 router.get('/user/houses', getUserHousesController);
-router.get('/users', getUser);
+router.get('/users/:userId', getUser);
 router.get('/logout', logoutController);
 router.patch('/users', updateUserValidation, updateUserController);
 router.delete('/users', deleteUserController);

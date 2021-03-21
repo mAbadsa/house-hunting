@@ -21,5 +21,6 @@
         "singleQuote": true
       }
     ]
-  }
+  },
+  "allowAfterThis": true
 }
