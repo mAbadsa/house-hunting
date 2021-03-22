@@ -5,8 +5,11 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const router = require('./router');
 const { serverError, clientError } = require('./controller/error');
+const connectDB = require('./database/config/connect');
 
 const app = express();
+
+connectDB();
 
 app.set('PORT', process.env.PORT || 8080);
 const middleware = [
