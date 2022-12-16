@@ -18,7 +18,7 @@ switch (NODE_ENV) {
 }
 const options = {
   connectionString: dbUrl,
-  ssl: false,
+  ssl: true,
 };
 const pool = new Pool(options);
 
