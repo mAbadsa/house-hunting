@@ -2,6 +2,9 @@
   "name": "house-hunting-app",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "16.x"
+  },
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=production node server/index.js",
