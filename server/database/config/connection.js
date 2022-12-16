@@ -16,6 +16,8 @@ switch (NODE_ENV) {
   default:
     throw new Error('three is no database url  found ... ');
 }
+// eslint-disable-next-line no-console
+console.log({ dbUrl });
 const options = {
   connectionString: dbUrl,
   ssl: NODE_ENV === 'production',
